@@ -1,0 +1,30 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                       Application.index
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+GET		/api/VerificarSaldo						ContaController.verificarSaldo
+POST	/api/InserirConta						ContaController.inserirConta
+POST	/api/SacarValor							ContaController.sacarValor
+POST	/api/DepositarValor						ContaController.depositarValor
+POST	/api/TransferirValor					ContaController.transferirValor
+GET		/api/AllContas							ContaController.allContas
+POST	/api/ExcluirConta						ContaController.excluirConta
+
+POST	/api/InserirCliente						ClienteController.inserirCliente
+POST	/api/ExcluirCliente						ClienteController.excluirCliente
+POST	/api/AtualizarCliente					ClienteController.atualizarCliente
+
+POST	/api/InserirAgencia						AgenciaController.inserirAgencia
+POST	/api/ExcluirAgencia						AgenciaController.excluirAgencia
+POST	/api/AtualizarAgencia					AgenciaController.atualizarAgencia
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}
