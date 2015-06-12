@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 testando por aqui.. de boa na lagoa!
+=======
+testando por aqui..Por enquanto suave na nave!
+>>>>>>> master
 
 essa bagaça é sinistra maluco! Tu ta m@luco!!
